@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+gridshift:
+  electricity-maps-api-key: ${ELECTRICITY_MAPS_API_KEY:}
+  api-key: ${GRIDSHIFT_API_KEY:}
+  rate-limit:
+    requests-per-minute: 30
+    burst-capacity: 10
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  security:
+    user:
+      password: disabled
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never

@@ -1,0 +1,20 @@
+# Environment — NEVER commit this
+.env.properties
+.env
+
+# Build output
+target/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs — may contain sensitive data
+*.log
+logs/
